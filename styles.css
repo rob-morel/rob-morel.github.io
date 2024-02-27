@@ -1,10 +1,105 @@
-video {
-    object-fit: cover;
+/*navbar css*/
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffd700; /* Change color on hover */
+}
+
+.content {
+  padding: 20px;
+}
+
+/*video*/
+
+
+
+.video-container {
+  position: relative;
+  width: 700px; /* Adjust the width of the video container */
+  height: 420px; /* Adjust the height of the video container */
+  overflow: hidden;
+}
+
+.video-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+  border-radius: 20px;
+}
+
+
+/*img container*/
+.image-container {
+    position: relative;
+    width: 400px; /* Adjust the width of the image container */
+    height: 300px; /* Adjust the height of the image container */
+}
+
+.image-container img {
     width: 100%;
     height: 100%;
-    position: fixed;
-    z-index: -1;
+    object-fit: cover;
 }
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the overlay color and opacity */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.image-container:hover .text-overlay {
+    opacity: 1;
+}
+
+/*main css*/
 
 .hero-container {
     height: 50vh;

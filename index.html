@@ -1,77 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+
+    <!--navbar-->
+
+    <header>
+        <nav>
+            <div class="logo">My Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
 
     <div class='hero-container'>
         <!--<img src='/images/image.jpg'></img>-->
         <h1>Portfolio </h1>
         <p>2020-Current</p>
-        
+
     </div>
 
-    <header>
-        <h1>Welcome to My Website</h1>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-
     <main>
-        <section>
-            <h2>About Us Test1</h2>
-            <p>This is a basic HTML file to demonstrate the structure of a webpage.</p>
-        </section>
-
-        <section>
-            <h2>Services</h2>
-            <ul>
-                <li>Web Development</li>
-                <li>Graphic Design</li>
-                <li>SEO Optimization</li>
-            </ul>
-        </section>
-
         <div>
-            
+
+            <!--
+            <div class="video-container">
+                <video class="video" autoplay>
+                    <source src="images/GameVideo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="overlay"></div>
+            </div>
+            -->
+
+            <!-- video hover fucntionality -->
+            <script>
+                function playVideo() {
+                    var thumbnail = document.getElementById('thumbnail');
+                    var video = document.getElementById('hover-video');
+
+                    thumbnail.style.display = 'none';
+                    video.style.display = 'block';
+                    video.play();
+                }
+
+                function pauseVideo() {
+                    var thumbnail = document.getElementById('thumbnail');
+                    var video = document.getElementById('hover-video');
+
+                    thumbnail.style.display = 'block';
+                    video.style.display = 'none';
+                    video.pause();
+                }
+            </script>
+
+            <!---->
 
             <div class='cards'>
                 <h2>Game Developer</h2>
-                <p>Multiplayer RPG featuring crafting, combat, inventory managment, and more, developed for steam release.</p>
+                <p>Multiplayer RPG featuring crafting, combat, inventory managment, and more, developed for steam
+                    release.</p>
                 <p>Unity, C#</p>
                 <p>2023-current</p>
                 <p>Gitlab: https://gitlab.com/bhevo/plan-a</p>
                 <p>Youtube: https://www.youtube.com/@boyspeak.</p>
+
+
                 <div class='wide-card-container'>
-                    
+
                     <div class='small-cards-container'>
-                        <div class='small-card'>
-                            <img src="/images/GameUnity.png" title="jabdbadhahbdnbajbdbakbdjbjk">
-                            </img>
+                        <div class='video-container' onmouseover="playVideo()" onmouseout="pauseVideo()">
+                            <img id="thumbnail" src="images/GameUnity.png" alt="Video Thumbnail">
+                            <video id="hover-video" class="video" loop muted>
+                                <source src="images/GameVideo2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+
                         </div>
-                        <div class='small-card'>
-                            <img src="/images/GameScript.png">
-                            </img>
+                        <div class="image-container">
+                            <img src="images/GameScript.PNG" alt="Image">
+                            <div class="text-overlay">
+                                <p>This is some text overlaying the image</p>
+                            </div>
                         </div>
                     </div>
                     <div class='small-cards-container'>
                         <div class='small-card'>
-                            <img src="/images/GameDesign.png">
+                            <img src="images/GameDesign.png">
                             </img>
                         </div>
                         <div class='small-card'>
-                            <img src="/images/GameChannel.png">
+                            <img src="images/GameChannel.png">
                             </img>
                         </div>
                     </div>
@@ -82,22 +113,23 @@
             <div class='cards'>
 
                 <h2> Hotdesking app</h2>
-                <p>Book a desk you want to use for a specific date. Open desks are green, pending desks are blue, booked desks are red, and locked.</p>
+                <p>Book a desk you want to use for a specific date. Open desks are green, pending desks are blue, booked
+                    desks are red, and locked.</p>
                 <p>Java</p>
                 <p>2021</p>
 
-                <div className='card-container'>
-                    <div className='big-card'>
-                        <img src="/images/HotdeskMain.png">
+                <div class='card-container'>
+                    <div class='big-card'>
+                        <img src="images/HotdeskMain.png">
                         </img>
                     </div>
-                    <div className='small-cards-container'>
-                        <div className='small-card'>
-                            <img src="/images/HotdeskLogin.png">
+                    <div class='small-cards-container'>
+                        <div class='small-card'>
+                            <img src="images/HotdeskLogin.png">
                             </img>
                         </div>
-                        <div className='small-card'>
-                            <img src="/images/HotdeskRegister.png">
+                        <div class='small-card'>
+                            <img src="images/HotdeskRegister.png">
                             </img>
                         </div>
                     </div>
@@ -105,24 +137,24 @@
 
             </div>
 
-            <div className='cards'>
+            <div class='cards'>
                 <h2> Game Wiki</h2>
                 <p>Look up information about items, enviroments, enemies, and more about a video game.</p>
                 <p>ASP.NET, C#, SQL local database</p>
                 <p>2024-current</p>
-                <div className='card-container'>
-                    
-                    <div className='small-cards-container'>
-                        <div className='small-card'>
-                            <img src="/images/GameWikiMain.png">
+                <div class='card-container'>
+
+                    <div class='small-cards-container'>
+                        <div class='small-card'>
+                            <img src="images/GameWikiMain.png">
                             </img>
                         </div>
-                        <div className='small-card'>
-                            <img src="/images/GameWiki.png">
+                        <div class='small-card'>
+                            <img src="images/GameWiki.png">
                             </img>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
 
@@ -138,4 +170,5 @@
         <p>&copy; 2024 My Website. All rights reserved.</p>
     </footer>
 </body>
+
 </html>
