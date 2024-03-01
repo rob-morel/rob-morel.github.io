@@ -12,163 +12,105 @@
 
     <!--navbar-->
 
-    <header>
-        <nav>
-            <div class="logo">My Portfolio</div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
+    <nav>
+        <div class="logo">My Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
 
     <div class='hero-container'>
-        <!--<img src='/images/image.jpg'></img>-->
         <h1>Portfolio </h1>
         <p>2020-Current</p>
-
     </div>
 
     <main>
-        <div>
 
-            <!--
-            <div class="video-container">
-                <video class="video" autoplay>
-                    <source src="images/GameVideo.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="overlay"></div>
-            </div>
-            -->
-
-            <!-- video hover fucntionality -->
-            <script>
-                function playVideo() {
-                    var thumbnail = document.getElementById('thumbnail');
-                    var video = document.getElementById('hover-video');
-
-                    thumbnail.style.display = 'none';
-                    video.style.display = 'block';
-                    video.play();
-                }
-
-                function pauseVideo() {
-                    var thumbnail = document.getElementById('thumbnail');
-                    var video = document.getElementById('hover-video');
-
-                    thumbnail.style.display = 'block';
-                    video.style.display = 'none';
-                    video.pause();
-                }
-            </script>
-
-            <!---->
-
-            <div class='cards'>
+        <div class="project-container">
+            <div class="text-info">
                 <h2>Game Developer</h2>
-                <p>Multiplayer RPG featuring crafting, combat, inventory managment, and more, developed for steam
-                    release.</p>
+                <p>Multiplayer RPG featuring crafting, combat, inventory management, and more, developed for Steam
+                    release.
+                </p>
                 <p>Unity, C#</p>
                 <p>2023-current</p>
-                <p>Gitlab: https://gitlab.com/bhevo/plan-a</p>
-                <p>Youtube: https://www.youtube.com/@boyspeak.</p>
-
-
-                <div class='wide-card-container'>
-
-                    <div class='small-cards-container'>
-                        <div class='video-container' onmouseover="playVideo()" onmouseout="pauseVideo()">
-                            <img id="thumbnail" src="images/GameUnity.png" alt="Video Thumbnail">
-                            <video id="hover-video" class="video" loop muted>
-                                <source src="images/GameVideo2.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-
-                        </div>
-                        <div class="image-container">
-                            <img src="images/GameScript.PNG" alt="Image">
-                            <div class="text-overlay">
-                                <p>This is some text overlaying the image</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='small-cards-container'>
-                        <div class='small-card'>
-                            <img src="images/GameDesign.png">
-                            </img>
-                        </div>
-                        <div class='small-card'>
-                            <img src="images/GameChannel.png">
-                            </img>
-                        </div>
-                    </div>
-
-                </div>
+                <p>Gitlab: <a href="https://gitlab.com/bhevo/plan-a" target="_blank">https://gitlab.com/bhevo/plan-a</a>
+                </p>
+                <p>Youtube: <a href="https://www.youtube.com/@boyspeak"
+                        target="_blank">https://www.youtube.com/@boyspeak</a></p>
             </div>
 
-            <div class='cards'>
+            <div class="grid-container">
 
-                <h2> Hotdesking app</h2>
-                <p>Book a desk you want to use for a specific date. Open desks are green, pending desks are blue, booked
-                    desks are red, and locked.</p>
-                <p>Java</p>
-                <p>2021</p>
-
-                <div class='card-container'>
-                    <div class='big-card'>
-                        <img src="images/HotdeskMain.png">
-                        </img>
+                <div class="grid-item">
+                    <div class="video-container" onmouseover="playVideo()" onmouseout="pauseVideo()">
+                        <img id="thumbnail" src="images/GameUnity.png" alt="Video Thumbnail">
+                        <video id="hover-video" class="video" loop muted>
+                            <source src="images/GameVideo2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
-                    <div class='small-cards-container'>
-                        <div class='small-card'>
-                            <img src="images/HotdeskLogin.png">
-                            </img>
+                </div>
+
+                <div class="grid-item">
+                    <div class="image-container">
+                        <img src="images/GameScript.png" alt="Image">
+                        <div class="text-overlay">
+                            <p>Coded with C# using Visual Studio</p>
                         </div>
-                        <div class='small-card'>
-                            <img src="images/HotdeskRegister.png">
-                            </img>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="image-container">
+                        <img src="images/GameDesign.png" alt="Image">
+                        <div class="text-overlay">
+                            <p>Art and animation hand drawn in pixelart using Aseprite</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="image-container">
+                        <img src="images/GameChannel.png" alt="Image">
+                        <div class="text-overlay">
+                            <p>Development progress posted to YouTube. Over 10,000 channel views.</p>
                         </div>
                     </div>
                 </div>
 
             </div>
-
-            <div class='cards'>
-                <h2> Game Wiki</h2>
-                <p>Look up information about items, enviroments, enemies, and more about a video game.</p>
-                <p>ASP.NET, C#, SQL local database</p>
-                <p>2024-current</p>
-                <div class='card-container'>
-
-                    <div class='small-cards-container'>
-                        <div class='small-card'>
-                            <img src="images/GameWikiMain.png">
-                            </img>
-                        </div>
-                        <div class='small-card'>
-                            <img src="images/GameWiki.png">
-                            </img>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
         </div>
 
-        <section>
-            <h2>Contact Us</h2>
-            <p>You can contact us at example@example.com</p>
-        </section>
+
+        <footer>
+            <p>&copy; 2024 My Website. All rights reserved.</p>
+        </footer>
+
     </main>
 
-    <footer>
-        <p>&copy; 2024 My Website. All rights reserved.</p>
-    </footer>
+    <script>
+        function playVideo() {
+            var thumbnail = document.getElementById('thumbnail');
+            var video = document.getElementById('hover-video');
+
+            thumbnail.style.display = 'none';
+            video.style.display = 'block';
+            video.play();
+        }
+
+        function pauseVideo() {
+            var thumbnail = document.getElementById('thumbnail');
+            var video = document.getElementById('hover-video');
+
+            thumbnail.style.display = 'block';
+            video.style.display = 'none';
+            video.pause();
+        }
+    </script>
+
 </body>
 
 </html>
