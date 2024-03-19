@@ -181,3 +181,9 @@ nav {
     width: 100%;
   }
 }
+
+/* Footer */
+.footer-container {
+  background-color: #f0f0f0; /* Background color */
+  padding: 20px 20px; /* Padding top and bottom */
+}

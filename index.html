@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
 
     <!--navbar-->
-
-
+    <!--
     <nav>
         <div class="logo">My Portfolio</div>
         <ul class="nav-links">
@@ -20,7 +20,9 @@
             <li><a href="#">Contact</a></li>
         </ul>
     </nav>
+    -->
 
+    <!--hero-->
     <div class='hero-container'>
         <h1>Portfolio </h1>
         <p>2020-Current</p>
@@ -34,16 +36,17 @@
             <div class="text-info">
                 <h2>Unity Game</h2>
                 <p>Multiplayer RPG featuring crafting, combat, inventory management, and more, developed for Steam
-                    release. | Unity, C# | 2023-current | Gitlab: <a href="https://gitlab.com/bhevo/plan-a" target="_blank">https://gitlab.com/bhevo/plan-a </a> | Youtube: <a href="https://www.youtube.com/@boyspeak"
-                    target="_blank">https://www.youtube.com/@boyspeak</a>
+                    release. | Unity, C# | 2023-current | Gitlab: <a href="https://gitlab.com/bhevo/plan-a"
+                        target="_blank">https://gitlab.com/bhevo/plan-a </a> | Youtube: <a
+                        href="https://www.youtube.com/@boyspeak" target="_blank">https://www.youtube.com/@boyspeak</a>
                 </p>
-                
+
             </div>
             <div class="grid-container">
 
                 <div class="grid-item">
                     <div class="video-container" onmouseover="playVideo(event)" onmouseout="pauseVideo(event)">
-                        <img class="thumbnail" src="images/GameUnity.PNG" alt="Video Thumbnail" >
+                        <img class="thumbnail" src="images/GameUnity.PNG" alt="Video Thumbnail">
                         <video id="hover-video" class="video" loop muted>
                             <source src="images/GameVideo2.mp4" type="video/mp4">
                             Your browser does not support the video tag.
@@ -79,15 +82,16 @@
                 </div>
             </div>
         </div>
-
+        
         <!--Roblox Game-->
         <div class="project-container">
 
             <div class="text-info">
                 <h2>Roblox Game</h2>
-                <p>Multiplayer adventure horror game where you have to explore the labyrinth before the monster catches you. | Roblox Studio, Blender, Lua | 2024-current
+                <p>Multiplayer adventure horror game where you have to explore the labyrinth before the monster catches
+                    you. | Roblox Studio, Blender, Lua | 2024-current
                 </p>
-                
+
             </div>
             <div class="grid-container">
 
@@ -95,7 +99,7 @@
                     <div class="video-container" onmouseover="playVideo(event)" onmouseout="pauseVideo(event)">
                         <img class="thumbnail" src="images/RobloxPlayer.png" alt="Video Thumbnail">
                         <video id="hover-video" class="video" loop muted>
-                            <source src="images/RobloxDemo3.mp4" type="video/mp4">
+                            <source src="images/RobloxDemo2.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -136,81 +140,57 @@
             <div class="text-info">
                 <h2>Hotdesking App</h2>
                 <p>Book a desk you want to use for a specific date. Open desks are green, pending desks are blue, booked
-                    desks are red, and locked. | Java | 2021</p>
-             
-
+                    desks are red, and locked. | Java, JavaFX, IntelliJ IDEA | 2021</p>
             </div>
+
             <div class="grid-container">
 
                 <div class="grid-item">
+                    <div class="video-container" onmouseover="playVideo(event)" onmouseout="pauseVideo(event)">
+                        <img class="thumbnail" src="images/HotdeskMain2.png" alt="Video Thumbnail">
+                        <video id="hover-video" class="video" loop muted>
+                            <source src="images/HotDeskDemo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <div class="grid-item">
                     <div class="image-container">
-                        <img src="images/HotdeskMain.png" alt="Image">
+                        <img src="images/HotdeskLogin2.png" alt="Image">
                         <div class="text-overlay">
-                            <p>Coded with C# using Visual Studio</p>
+                            <p>Login with admin to confirm booked desks</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="grid-item">
                     <div class="image-container">
-                        <img src="images/HotdeskLogin.png" alt="Image">
+                        <img src="images/HotdeskRegister2.png" alt="Image">
                         <div class="text-overlay">
-                            <p>Coded with C# using Visual Studio</p>
+                            <p>Register a user account, with form validation</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="grid-item">
                     <div class="image-container">
-                        <img src="images/HotdeskRegister.png" alt="Image">
+                        <img src="images/HotdeskMain2.png" alt="Image">
                         <div class="text-overlay">
-                            <p>Art and animation hand drawn in pixelart using Aseprite</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid-item">
-                    <div class="image-container">
-                        <img src="images/HotdeskMain.png" alt="Image">
-                        <div class="text-overlay">
-                            <p>Development progress posted to YouTube. Over 15,000 channel views.</p>
+                            <p>Select which desk you want to book and await admin confirmation</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-
-        <footer>
-            <p>&copy; 2024 My Website. All rights reserved.</p>
-        </footer>
-
+        <!--footer-->
+        <div class='footer-container'>
+            <h1>Contact</h1>
+            <p>Email: robbie.d.morel@gmail.com</p>
+            <p>Phone: 0426526300</p>
+        </div>
     </main>
-
-    <script>
-        function playVideo(event) {
-            var video = event.target.closest('.project-container').querySelector('.video');
-            var thumbnail = event.target.closest('.project-container').querySelector('.thumbnail');
-    
-            if (thumbnail && video) {
-                thumbnail.style.display = 'none';
-                video.style.display = 'block';
-                video.play();
-            }
-        }
-    
-        function pauseVideo(event) {
-            var video = event.target.closest('.project-container').querySelector('.video');
-            var thumbnail = event.target.closest('.project-container').querySelector('.thumbnail');
-    
-            if (thumbnail && video) {
-                thumbnail.style.display = 'block';
-                video.style.display = 'none';
-                video.pause();
-            }
-        }
-    </script>
-    
 
 </body>
 
